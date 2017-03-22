@@ -5,6 +5,11 @@ const Row = require('./Row');
 
 class Table extends React.Component {
   render () {
+    return (
+      <table>
+
+      </table>
+    );
   }
 }
 
