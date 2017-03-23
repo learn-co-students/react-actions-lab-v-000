@@ -41,11 +41,13 @@ class Spreadsheet extends React.Component {
         </div>
 
         <Table 
+          table={this.state.table}
           onChange={this.handleChange}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur} />
 
         <div className='spreadsheet__focused'>
+          {this.state.focused && this.state.focused.join(' - ')}
         </div>
       </div>
     );
