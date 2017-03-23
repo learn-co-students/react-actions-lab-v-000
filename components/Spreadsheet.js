@@ -8,6 +8,10 @@ class Spreadsheet extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
+      focused: null,
+      table: [
+        ['']
+      ]
     };
 
     this.handleAddColumn    =   actions.addColumn.bind(this);
