@@ -34,6 +34,9 @@ function focusCell (rowIndex, columnIndex) {
 }
 
 function blurCell () {
+  this.setState({
+    focused: null
+  })
 }
 
 function removeRow (ev) {
