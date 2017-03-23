@@ -28,6 +28,9 @@ function changeCell (rowIndex, columnIndex, ev) {
 }
 
 function focusCell (rowIndex, columnIndex) {
+  this.setState({
+    focused: [rowIndex, columnIndex]
+  })
 }
 
 function blurCell () {
