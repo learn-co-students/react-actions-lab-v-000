@@ -51,6 +51,21 @@ function removeRow (ev) {
 }
 
 function removeColumn (ev) {
+  ev.preventDefault();
+
+  const width = this.state.table[0].length;
+
+  if (width > 1) {
+    const updatedTable = this.state.table.map((row) => {
+      row.pop();
+      return row;
+    })
+
+    this.setState({
+      table: updatedTable
+    })
+  }
+  
 }
 
 module.exports = {
