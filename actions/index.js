@@ -19,6 +19,12 @@ function addRow (ev) {
 }
 
 function changeCell (rowIndex, columnIndex, ev) {
+  const updatedTable = this.state.table;
+  updatedTable[rowIndex][columnIndex] = ev.target.value;
+  
+  this.setState({
+    table: updatedTable
+  })
 }
 
 function focusCell (rowIndex, columnIndex) {
