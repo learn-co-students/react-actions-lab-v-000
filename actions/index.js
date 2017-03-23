@@ -43,11 +43,12 @@ function removeRow (ev) {
   ev.preventDefault();
 
   const updatedTable = this.state.table;
-  if (updatedTable.length > 1) updatedTable.pop();
-
-  this.setState({
-    table: updatedTable
-  })
+  if (updatedTable.length > 1) {
+    updatedTable.pop();
+    this.setState({
+      table: updatedTable
+    })
+  }
 }
 
 function removeColumn (ev) {
