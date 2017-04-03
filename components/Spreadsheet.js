@@ -8,8 +8,9 @@ class Spreadsheet extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
+      focused: null,
+      table: [['']]
     };
-
   }
   render () {
     return (
