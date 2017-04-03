@@ -9,7 +9,6 @@ function addRow (ev) {
 }
 
 function changeCell (rowIndex, columnIndex, ev) {
-  ev.preventDefault();
 }
 
 function focusCell (rowIndex, columnIndex) {
