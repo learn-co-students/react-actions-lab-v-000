@@ -8,7 +8,7 @@ export default class Spreadsheet extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      focused: false,
+      focused: null,
       table: [['']]
     };
     this.handleAddColumn = actions.addColumn.bind(this)
@@ -34,7 +34,7 @@ export default class Spreadsheet extends React.Component {
           <button onClick={this.handleRemoveRow}>Remove Row</button>
         </div>
 
-        <Table onBlur={this.handleBlur} onFocus={this.handleFocus} onChange={this.handleChange} />
+        <Table table={this.state.table} onBlur={this.handleBlur} onFocus={this.handleFocus} onChange={this.handleChange} />
 
         <div className='spreadsheet__focused'>
         {
