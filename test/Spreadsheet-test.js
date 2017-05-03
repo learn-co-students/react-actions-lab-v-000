@@ -13,7 +13,7 @@ describe('<Spreadsheet />', function () {
   afterEach(function () {
     sandbox.restore();
   });
-
+//
   it('should bind addColumn action', function () {
     sandbox.spy(actions.addColumn, 'bind');
     const wrapper = shallow(<Spreadsheet />);
